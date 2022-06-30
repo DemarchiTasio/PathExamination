@@ -1,148 +1,212 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="styles.css" type="text/css">
-    <title>CSS</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <!-- Style link -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Boxicons CSS -->
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <title>Path Institucion</title>
 </head>
 
 <body>
-    <header class="header-grid">
-        <div class="logo"><img src="Icons/Logo Path.jpg" alt=""></div>
-        <div class="top .col-sm-12"></div>
-    </header>
-    <div class="center-grid">
-        <div class="nave">
-            <div class="instituciones1 box"><img src="Icons/List.png" alt=""> INSTITUCIONES</div>
-            <div class="instituciones box"><img src="Icons/List.png" alt="">INSTITUCIONES</div>
-            <div class="instituciones box"><img src="Icons/List.png" alt="">INSTITUCIONES</div>
-            <div class="instituciones box"><img src="Icons/List.png" alt="">INSTITUCIONES</div>
-            <div class="instituciones box"><img src="Icons/List.png" alt="">INSTITUCIONES</div>
-            <div class="logoutbox">
-                <div class="boxlogout box">
-                    <img src="Icons/Logout.png" alt=""> 
-                   <p>LOGOUT</p>
-                </div>
-            </div>
+    <div class="grid-container">
+        <div id="logo-content">
+            <img src="Imagenes/Logo Path.jpg" alt="">
         </div>
-     <div class="content">
-            <div class="table-layout">
-                <div class="top-bar">
-                    <img class="icons" src="Icons/Filter.png" alt="">
-                    <div class="input"><input type="text" name="filtro" id="" placeholder="Escribe aquí"></div>
-                    <img class="icons serch"src="Icons/Serch.png" alt="">
-                    <div class="addcont">
-                        <div class="add">
-                            <p>NEW</p>
-                            <img class="addimg icons" src="Icons/add.png" alt="">
-                        </div>
-                    </div>      
+        <div id="top-side">
+            <!-- <p>Instituciones</p> -->
+        </div>
+        <nav id="navegador">
+            <!-- <ul class="nav-list"> -->
+            <!-- <li class="list-item"> -->
+            <div class="list-item">
+                <a href="#">
+                    <i class='bx bxs-report'></i>
+                    <span class="link-name">Informes</span>
+                </a>
+            </div>
+            <!-- </li> -->
+            <!-- <li class="list-item"> -->
+            <div class="list-item">
+                <a href="#">
+                    <i class='bx bxs-school'></i>
+                    <span class="link-name">Institutions</span>
+                </a>
+            </div>
+            <!-- </li> -->
+            <!-- <li class="list-item"> -->
+            <div class="list-item">
+                <a href="#">
+                    <i class='bx bxs-graduation'></i>
+                    <span class="link-name">Student</span>
+                </a>
+            </div>
+            <!-- </li> -->
+            <!-- <li class="list-item"> -->
+            <div class="list-item">
+                <a href="#">
+                    <i class='bx bx-book'></i>
+                    <span class="link-name">Exam</span>
+                </a>
+            </div>
+            <div class="list-item">
+                <a href="#">
+                    <i class='bx bxs-certification' ></i>
+                    <span class="link-name">Certification</span>
+                </a>
+            </div>
+            <!-- </li> -->
+            <!-- <li class="list-item"> -->
+            <div class="list-item log-out">
+                <a href="#">
+                    <i class='bx bx-log-out'></i>
+                    <span class="link-name">Log out</span>
+                </a>
+            </div>
+            <!-- </li> -->
+            <!-- </ul> -->
+        </nav>
+        <div class="center">
+            <div class="table-content">
+                <div class="top-bar-table">
+                    <!-- <ul> -->
+                    <!-- <li> -->
+                    <div class="table-items">
+                        <a href="#">
+                            <i class='icon bx bx-filter'></i>
+                        </a>
+                    </div>
+                    <!-- </li> -->
+                    <!-- <li> -->
+                    <div class="table-items">
+                        <input type="text" name="" id="search" placeholder="Escribe aqui">
+                        <a href="#">
+                            <i class='icon bx bx-search'></i>
+                        </a>
+                    </div>
+                    <!-- </li> -->
+                    <!-- <li> -->
+                    <div class="table-items">
+                        <a href="#">
+                            <span id="new-item">New</span>
+                            <i class='icon bx bx-plus'></i>
+                        </a>
+                    </div>
+                    <!-- </li> -->
+                    <!-- </ul> -->
                 </div>
                 <table class="table">
                     <thead>
-                      <tr>
-                        <th scope="col">#</th>
-                        <th scope="col">Nombre</th>
-                        <th scope="col">Contacto</th>
-                        <th scope="col">Tipo</th>
-                        <th scope="col">Provincia</th>
-                        <th scope="col">Email</th>
-                        <th scope="col">Telefono</th>
-                        <th scope="col">Estado</th>
-                        <th scope="col">Accion</th>
-                      </tr>
+                        <tr>
+                            <th class="identi" scope="col">#</th>
+                            <th scope="col">Nombre</th>
+                            <th class="contact" scope="col">Contacto</th>
+                            <th class="tipo" scope="col">Tipo</th>
+                            <th scope="col">Provincia</th>
+                            <th scope="col">Email</th>
+                            <th scope="col">Telefono</th>
+                            <th scope="col">Estado</th>
+                            <th scope="col">Accion</th>
+                        </tr>
                     </thead>
                     <tbody class="table-group-divider">
-                      <tr>
-                        <th scope="row">1</th>
-                        <td>Universidad del Salvador</td>
-                        <td>Instagram</td>
-                        <td>Universidad</td>
-                        <td>Buenos Aires</td>
-                        <td>usal.contacto@edu.com.ar</td>
-                        <td>11-25603423</td>
-                        <td>Localizado</td>
-                        <td>
-                            <div class="accion">
-                                <img class="iconaccion" src="Icons/edit.png" alt="">
-                                <img class="iconaccion" src="Icons/view.png" alt="">
-                                <img class="iconaccion" src="Icons/delete.png" alt="">
-                            </div>
-                        </td>
-                      </tr>
-                      <tr>
-                        <th scope="row">2</th>
-                        <td>Madre del Divino Pastor</td>
-                        <td>Facebook</td>
-                        <td>Colegio</td>
-                        <td>Buenos Aires</td>
-                        <td>madreo@madre.com.ar</td>
-                        <td>11-25603423</td>
-                        <td>Contactado</td>
-                        <td>
-                            <div class="accion">
-                                <img class="iconaccion" src="Icons/edit.png" alt="">
-                                <img class="iconaccion" src="Icons/view.png" alt="">
-                                <img class="iconaccion" src="Icons/delete.png" alt="">
-                            </div>
-                        </td>
-                      </tr>
-                      <tr>
-                        <th scope="row">3</th>
-                        <td>Universidad Nacional de Luján</td>
-                        <td>Presencial</td>
-                        <td>Universidad</td>
-                        <td>Buenos Aires</td>
-                        <td>unlu.contacto@edu.com.ar</td>
-                        <td>11-25603423</td>
-                        <td>Reunion a programar</td>
-                        <td>
-                            <div class="accion">
-                                <img class="iconaccion" src="Icons/edit.png" alt="">
-                                <img class="iconaccion" src="Icons/view.png" alt="">
-                                <img class="iconaccion" src="Icons/delete.png" alt="">
-                            </div>
-                        </td>
-                      </tr>
-                      <tr>
-                        <th scope="row">4</th>
-                        <td>Universidad del Salvador</td>
-                        <td>Instagram</td>
-                        <td>Universidad</td>
-                        <td>Buenos Aires</td>
-                        <td>usal.contacto@edu.com.ar</td>
-                        <td>11-25603423</td>
-                        <td>Localizado</td>
-                        <td>
-                            <div class="accion">
-                                <img class="iconaccion" src="Icons/edit.png" alt="">
-                                <img class="iconaccion" src="Icons/view.png" alt="">
-                                <img class="iconaccion" src="Icons/delete.png" alt="">
-                            </div>
-                        </td>
-                      </tr>
-                      <tr>
-                        <th scope="row">5</th>
-                        <td>Universidad del Salvador</td>
-                        <td>Instagram</td>
-                        <td>Universidad</td>
-                        <td>Buenos Aires</td>
-                        <td>usal.contacto@edu.com.ar</td>
-                        <td>11-25603423</td>
-                        <td>Localizado</td>
-                        <td>
-                            <div class="accion">
-                                <img class="iconaccion" src="Icons/edit.png" alt="">
-                                <img class="iconaccion" src="Icons/view.png" alt="">
-                                <img class="iconaccion" src="Icons/delete.png" alt="">
-                            </div>
-                        </td>
-                      </tr>
+                        <tr>
+                            <th class="identi" scope="row">1</th>
+                            <td>Universidad del Salvador</td>
+                            <td class="contact">Instagram</td>
+                            <td class="tipo">Universidad</td>
+                            <td>Buenos Aires</td>
+                            <td>usal.contacto@edu.com.ar</td>
+                            <td>11-25603423</td>
+                            <td>Localizado</td>
+                            <td>
+                                <div class="action">
+                                    <a href="" class="edit"><i class='bx bx-edit' ></i></a>
+                                    <a href="" class="view"><i class='bx bx-show-alt' ></i></a>
+                                    <a href="" class="delete"><i class='bx bx-trash' ></i></a>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th class="identi" scope="row">2</th>
+                            <td>Madre del Divino Pastor</td>
+                            <td class="contact">Facebook</td>
+                            <td class="tipo">Colegio</td>
+                            <td>Buenos Aires</td>
+                            <td>madreo@madre.com.ar</td>
+                            <td>11-25603423</td>
+                            <td>Contactado</td>
+                            <td>
+                                <div class="action">
+                                    <a href="" class="edit"><i class='bx bx-edit' ></i></a>
+                                    <a href="" class="view"><i class='bx bx-show-alt' ></i></a>
+                                    <a href="" class="delete"><i class='bx bx-trash' ></i></a>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th class="identi" scope="row">3</th>
+                            <td>Universidad Nacional de Luján</td>
+                            <td class="contact">Presencial</td>
+                            <td class="tipo">Universidad</td>
+                            <td>Buenos Aires</td>
+                            <td>unlu.contacto@edu.com.ar</td>
+                            <td>11-25603423</td>
+                            <td>Reunion a programar</td>
+                            <td>
+                                <div class="action">
+                                    <a href="" class="edit"><i class='bx bx-edit' ></i></a>
+                                    <a href="" class="view"><i class='bx bx-show-alt' ></i></a>
+                                    <a href="" class="delete"><i class='bx bx-trash' ></i></a>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th class="identi" scope="row">4</th>
+                            <td>Universidad del Salvador</td>
+                            <td class="contact">Instagram</td>
+                            <td class="tipo">Universidad</td>
+                            <td>Buenos Aires</td>
+                            <td>usal.contacto@edu.com.ar</td>
+                            <td>11-25603423</td>
+                            <td>Localizado</td>
+                            <td>
+                                <div class="action">
+                                    <a href="" class="edit"><i class='bx bx-edit' ></i></a>
+                                    <a href="" class="view"><i class='bx bx-show-alt' ></i></a>
+                                    <a href="" class="delete"><i class='bx bx-trash' ></i></a>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th class="identi" scope="row">5</th>
+                            <td>Universidad del Salvador</td>
+                            <td class="contact">Instagram</td>
+                            <td class="tipo">Universidad</td>
+                            <td>Buenos Aires</td>
+                            <td>usal.contacto@edu.com.ar</td>
+                            <td>11-25603423</td>
+                            <td>Localizado</td>
+                            <td>
+                                <div class="action">
+                                    <a href="" class="edit"><i class='bx bx-edit' ></i></a>
+                                    <a href="" class="view"><i class='bx bx-show-alt' ></i></a>
+                                    <a href="" class="delete"><i class='bx bx-trash' ></i></a>
+                                </div>
+                            </td>
+                        </tr>
                     </tbody>
-                  </table>
+                </table>
             </div>
-     </div>
+        </div>
+    </div>
 </body>
+
 </html>

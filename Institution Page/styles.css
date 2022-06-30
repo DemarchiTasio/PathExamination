@@ -1,57 +1,58 @@
-html{
-    width: 100%;
-    height: 100%;
-}
+html,
 body {
-    background-color: #eee;
-    width: 100%;
     height: 100%;
+    width: 100%;
+    background-color: #eee;
     margin: 0;
 }
 
-.header-grid{
+.grid-container {
     display: grid;
-    /* grid-area: "logo title"; */
-    grid-template-columns: 200px 1fr;
-    grid-template-rows: 70px;
+    width: 100%;
+    height: 100%;
+    grid-template:
+        "logo top"10%
+        "navbar main"auto
+         / 150px auto;
 }
 
-.logo{
+#top-side {
+    grid-area: top;
+    background-color: #004969;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+#logo-content {
     display: flex;
+    grid-area: logo;
     background-color: #ffffff;
-    border-bottom: solid 1.5px #A0A0A0;
+    border-bottom: solid 3px #A0A0A0;
     align-items: center;
     justify-content: center;
 }
 
-.top{
-    background-color: #004969;
-    width: 100%;
-    height: 90%;
-    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
-}
-
-.center-grid{
-    display: grid;
-    height: 88%;
-    grid-template-columns: 200px 1fr;
-    grid-template-rows: 100%;
-}
-
-.nave{
+#navegador {
     display: flex;
-    height: 100%;
     flex-direction: column;
-    background-color: white;
-    border-top: solid 1.5px #A0A0A0;
-    color: black;
+    grid-area: navbar;
+    background-color: #ffffff;
+    width: 100%;
+    row-gap: 25px;
+    /* grid-auto-rows: 100px; */
     padding-top: 30px;
-    grid-auto-rows: 100px;
-    row-gap: 15px;
-    
+    border-right: solid 2px #D4D4D4;
 }
 
-.box{
+.log-out {
+    height: 100%;
+}
+
+.log-out a {
+    align-self: flex-end;
+    margin-bottom: 15px;
+}
+
+.list-item {
     display: flex;
     margin: 0;
     background-color: #ffffff;
@@ -63,49 +64,28 @@ body {
     transition: margin-left 0.4s;
 }
 
-.box img{
-   width: 30px;
-   padding-right: 10px;
+.list-item a {
+    color: black;
+    text-decoration: none;
+    width: 100%;
+    transition: padding 0.3s;
 }
 
-.logoutbox{
-    display: flex;
-    height: 100%;
-}
-
-.boxlogout{
-    align-self: flex-end;
-}
-
-.boxlogout p{
-    margin:0;
-}
-
-.box:hover{
-    width: 95%;
+.list-item a:hover {
     border-radius: 15px;
     background-color: #004969;
+    padding: 5px;
     color: white;
     cursor: pointer;
-    /* box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); */
 }
 
-.instituciones1{
-    transform: scale(1.05, 1.05);
-    width: 90%;
-    margin-left: 15px;
-    border-radius: 15px;
-    background-color: #004969;
-    color: white;
-}
-
-
-.content{ 
+.center {
+    grid-area: main;
     width: 95%
+
 }
 
-.table-layout{
-    /* background-color: red; */
+.table-content {
     width: 100%;
     height: 90%;
     margin: 10px;
@@ -114,32 +94,38 @@ body {
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
-.top-bar{
-    display: flex;   
-    height: 40px;
+.top-bar-table {
+    display: flex;
+    height: 30px;
     width: 100%;
-    padding-top: 5px;
     background-color: #ffffff;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
 }
 
-.icons{
-    padding-left: 15px;
-    width: 40px;
+.table-items {
+    font-size: 16px;
+    align-items: center;
 }
 
-.serch{
+.table-items a {
+    height: 100%;
+    padding-left: 15px;
+    color: black;
+}
+
+.table-items:nth-child(2) {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    margin-left: 15px;
+}
+
+.table-items:nth-child(2) a{
     padding: 0;
 }
 
-.input{
-    display: flex;
-    align-items: center;
-    margin-left: 10px;
-}  
-
-.input input[type=text]{
+.table-items input[type=text] {
     width: 200px;
     height: 20px;
     border: none;
@@ -149,43 +135,128 @@ body {
     border-bottom: solid 1px #CACACA;
 }
 
-.input input[type=text]:focus{  
-    outline:none;
+.table-items input[type=text]:focus {
+    outline: none;
 }
 
-.addcont{
-    display: flex;
-    width: 100%;
+.icon {
+    font-size: 35px;
 }
 
-.add{
+.table-items:last-child {
     display: flex;
     width: 100%;
     justify-content: flex-end;
-    /* padding-left: 30px; */
 }
 
-.add p{
-    font-size: 20px;
+.table-items:last-child a {
+    display: flex;
+    text-decoration: none;
+    margin-right: 15px;
 }
 
-.addimg{
-    width: 35px;
-    padding: 0;
-    padding-bottom: 2px;
+.table-items:last-child #new-item {
+    display: flex;
+    height: 100%;
+    font-size: 26px;
+    align-items: center;
+    justify-content: center;
 }
 
-.add p:hover{
-    text-shadow: 1px 1px 2px #004969;
+.table-items a:hover {
+    text-shadow: 1px 1px 4px #004969;
     cursor: pointer;
 }
 
-.accion{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+.action a{
+    font-size: 24px;
+    text-decoration: none;
+    color: black;
 }
 
-.iconaccion{
-    width: 25px;
+.action a:hover {
+    text-shadow: 1px 1px 4px #004969;
+    cursor: pointer;
 }
 
+/* ----Media Querys---- */
+
+@media screen and (max-width: 1150px){
+
+    .identi{
+        display: none;
+    }
+    .grid-container {
+        display: grid;
+        width: 100%;
+        height: 100%;
+        grid-template:
+            "logo logo"8%
+            "navbar navbar" 3%
+            "main main"auto
+    }
+
+    #navegador {
+        flex-direction: row;
+        grid-area: navbar;
+        column-gap: 100px;
+        padding-top: 0;
+        justify-content: center;
+    }
+
+    .list-item {
+        display: flex;
+        margin: 0;
+        background-color: #ffffff;
+        font-size: 14px;
+        width: auto;
+        padding-left: 5px;
+        justify-content: center;
+        align-items: center;
+        transition: margin-left 0.4s;
+    }
+
+    .list-item a {
+        display: flex;
+        align-items: center;
+        color: black;
+        text-decoration: none;
+        width: 100%;
+        transition: padding 0.3s;
+    }
+    
+    .log-out a {
+        align-self: center;
+        margin-bottom: 0;
+    }
+
+    .list-item a:hover {
+        border-radius: 15px;
+        background-color: #004969;
+        padding: 2px;
+        color: white;
+        cursor: pointer;
+    }
+}
+
+@media screen and (max-width: 890px){
+    .log-out .link-name{
+        
+        display: none;
+    }
+
+    .log-out a{
+        font-size: 18px;
+        margin-right: 20px;
+    }
+    
+    #navegador{
+        column-gap: 100px;
+    }
+    .contact{
+        display: none;
+    } 
+    .tipo{
+        display: none;
+    }
+}
